@@ -452,7 +452,6 @@ function initKickstrap() {
 			var scriptString = formatString($(appendees[i]).css(contentHack.selector), true);
 			if (scriptString == 'ndefine' || scriptString == 'on') {scriptString = '<script></script>'}; 
 			// (above) Prevents "[u]ndefine[d]" from being printed when the appended script is removed.
-			console.log(scriptString);
 			$('body').append(scriptString);
 			
 		}
@@ -550,7 +549,13 @@ function app(x) {
 		    resourcesRequired.splice(resourcesRequired.indexOf(resourcesRequired[i]), 1);
 			}
 		}	// Commented items removed, finalize the required items in the app object.
-		window[x].resourcesRequired = resourcesRequired;
+
+		// Support lazy-loading apps.
+		var me
+		if (typeof window[x] == 'object') me = window[x]
+		else me = this
+
+		me.resourcesRequired = resourcesRequired;
 		// Now look for dependent items.
 		if (resources[1]) {
 			var resourcesDependent = resources[1].splitCSV();
@@ -559,11 +564,11 @@ function app(x) {
 			    resourcesDependent.splice(resourcesDependent.indexOf(resourcesDependent[i]), 1);
 				}
 			}
-			window[x].resourcesDependent = resourcesDependent;
+			me.resourcesDependent = resourcesDependent;
 		}
-		appArray.push(window[x]);
+		appArray.push(me);
 		if(!universalsSet) {loadResources()}
-    // Test to see if the resources we loaded are equal to the resources we've found.
+    	// Test to see if the resources we loaded are equal to the resources we've found.
 		if(appArray.length == ks.apps.length) {loadResources();}
 	}
 	
