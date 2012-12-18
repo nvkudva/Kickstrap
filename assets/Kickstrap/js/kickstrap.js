@@ -150,6 +150,13 @@ function setDir(newDir, dirType) {
    if (dirType == 'root') {
       // Give js defs preference
       ks.opts.rootDir = (ks.opts.rootDir || newDir)
+
+      // Support HTML5 <base>
+      /*
+      var base = document.createElement('base')
+      base.href = ks.opts.rootDir
+      document.body.appendChild(base)
+      */
    }
 	 if (dirType == 'universal') {
 			ks.opts.universals = (ks.opts.universals || newDir)
