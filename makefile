@@ -15,8 +15,8 @@ prod:
 	@cp assets/misc/qunit.zip product/Kickstrap/
 	@echo "Delete contents of apps folder and individually select apps..."
 	@rm -rf product/Kickstrap/apps/*
-		@echo "-Animate.CSS"
-		@cp -r assets/Kickstrap/apps/animatecss product/Kickstrap/apps/
+		@echo "-Retina"
+		@cp -r assets/Kickstrap/apps/retina product/Kickstrap/apps/
 		
 		@echo "-Bootstrap"
 		@cp -r assets/Kickstrap/apps/bootstrap product/Kickstrap/apps/
