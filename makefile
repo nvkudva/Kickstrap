@@ -30,8 +30,8 @@ prod:
 		@echo "-Color Schemer"
 		@cp -r assets/Kickstrap/apps/colorschemer product/Kickstrap/apps/
 	
-		@echo "-Pines Notify"
-		@cp -r assets/Kickstrap/apps/pinesnotify product/Kickstrap/apps/
+		@echo "-TinyGrowl"
+		@cp -r assets/Kickstrap/apps/tinygrowl product/Kickstrap/apps/
 	
 		@echo "-jQuery Lint"
 		@cp -r assets/Kickstrap/apps/jquerylint product/Kickstrap/apps/
