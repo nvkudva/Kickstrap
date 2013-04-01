@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-dist
-/tests
-.DS_Store
-UglifyJS
-
-UglifyJS2
-node_modules
-=======
 # Numerous always-ignore extensions
 *.diff
 *.err
@@ -32,15 +23,7 @@ Thumbs.db
 nbproject
 *.sublime-project
 *.sublime-workspace
->>>>>>> 37d0a30589e8bd74299b2d857c348d91396563ed
 
-assets/Kickstrap/bootstrap/.git
-assets/Kickstrap/bootstrap/.[a-z]*
-
-<<<<<<< HEAD
-assets/Kickstrap/qunit/.git
-assets/Kickstrap/qunit/.[a-z]*
-=======
 # Folders to ignore
 .hg
 .svn
@@ -48,4 +31,3 @@ assets/Kickstrap/qunit/.[a-z]*
 .idea
 node_modules
 dist
->>>>>>> 37d0a30589e8bd74299b2d857c348d91396563ed
