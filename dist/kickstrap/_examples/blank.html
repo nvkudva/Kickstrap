@@ -37,20 +37,22 @@
         </ul>
       </div>
       <div id="page" class="container">     
-        <section id="sidebar">
-          <div class="row">
-            <div class="col-span-12">
-              <p>Hello world.</p>
+        <div class="row">
+          <section id="sidebar" data-spy="affix" data-offset-top="100" class="col-span-3">
+            <div class="row">
+              <div class="col-span-12">
+                <p>Hello world.</p>
+              </div>
             </div>
-          </div>
-        </section>
-        <section id="main">
-          <div class="row">
-            <div class="col-span-12">
-              <p>Hello world.</p>
+          </section>
+          <section id="main" class="col-span-9">
+            <div class="row">
+              <div class="col-span-12">
+                <p>Hello world.</p>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
       <div class="push"></div>
     </div>
@@ -63,10 +65,7 @@
         </div>
       </div>
       <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-      <script src="../_core/bootstrap/js/bootstrap-collapse.js"></script>
-      <script src="../apps/waypoints/waypoints.min.js"></script>
-      <script src="../apps/waypoints/shortcuts/sticky-elements/waypoints-sticky.min.js"></script>
-      <script>$('section#sidebar').waypoint('sticky');</script>
+      <script src="../apps/bootstrap/bootstrap.js"></script>
     </div>
   </body>
 </html>

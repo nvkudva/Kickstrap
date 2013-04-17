@@ -39,39 +39,41 @@
         </ul>
       </div>
       <div id="page" class="container">     
-        <section id="sidebar">
-          <div class="row">
-            <div class="col-span-12">
-              <h4>Filtering Options</h4>
-              <input placeholder="Filter" type="text" data-bind="value: filterTerm, valueUpdate: 'afterkeydown'">
+        <div class="row">
+          <section id="sidebar" data-spy="affix" data-offset-top="100" class="col-span-3">
+            <div class="row">
+              <div class="col-span-12">
+                <h4>Filtering Options</h4>
+                <input placeholder="Filter" type="text" data-bind="value: filterTerm, valueUpdate: 'afterkeydown'">
+              </div>
             </div>
-          </div>
-        </section>
-        <section id="main">
-          <div class="row">
-            <div class="col-span-12">
-              <h2>All Items</h2>
-              <table class="table table-hover">
-                <thead>
-                  <tr>
-                    <th>Image </th>
-                    <th>Product</th>
-                    <th>Description</th>
-                    <th>Price</th>
-                  </tr>
-                </thead>
-                <tbody data-bind="foreach: filteredItems">
-                  <tr>
-                    <td style="width: 85px;"><a href="product-single.html"><img style="width: 60px;height:60px;" data-bind="attr:{ src: 'http://api.rethumb.com/v1/square/120/http://upload.wikimedia.org/wikipedia/commons/' + img }"></a></td>
-                    <td><a href="product-single.html" data-bind="text: title"> </a></td>
-                    <td data-bind="text: desc"></td>
-                    <td data-bind="text: '$' + price.toFixed(2)"></td>
-                  </tr>
-                </tbody>
-              </table>
+          </section>
+          <section id="main" class="col-span-9">
+            <div class="row">
+              <div class="col-span-12">
+                <h2>All Items</h2>
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>Image </th>
+                      <th>Product</th>
+                      <th>Description</th>
+                      <th>Price</th>
+                    </tr>
+                  </thead>
+                  <tbody data-bind="foreach: filteredItems">
+                    <tr>
+                      <td style="width: 85px;"><a href="product-single.html"><img style="width: 60px;height:60px;" data-bind="attr:{ src: 'http://api.rethumb.com/v1/square/120/http://upload.wikimedia.org/wikipedia/commons/' + img }"></a></td>
+                      <td><a href="product-single.html" data-bind="text: title"> </a></td>
+                      <td data-bind="text: desc"></td>
+                      <td data-bind="text: '$' + price.toFixed(2)"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
       <div class="push"></div>
     </div>
@@ -84,10 +86,7 @@
         </div>
       </div>
       <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-      <script src="../_core/bootstrap/js/bootstrap-collapse.js"></script>
-      <script src="../apps/waypoints/waypoints.min.js"></script>
-      <script src="../apps/waypoints/shortcuts/sticky-elements/waypoints-sticky.min.js"></script>
-      <script>$('section#sidebar').waypoint('sticky');</script>
+      <script src="../apps/bootstrap/bootstrap.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/knockout/2.2.1/knockout-min.js"></script>
       <script src="/kickstrap/_examples/assets/products.js"></script>
       <script src="/kickstrap/_examples/assets/product-list.js"></script>

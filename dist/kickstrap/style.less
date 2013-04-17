@@ -44,7 +44,7 @@ html
       }
    }
 }
-div.sticky-wrapper + section#main {
+div#sidebar + section#main {
    float: left;
    width: 50%;
    margin-left: 0%;
@@ -60,7 +60,7 @@ section#sidebar {
    .transition(border-color 1s ease);
    margin-bottom: @footerHeight;
 }
-.sticky-wrapper { 
+#sidebar.affix { 
    float: left; 
    width: 50%;
    padding-left: 10%; 
@@ -136,7 +136,6 @@ article {
       }
       section#sidebar { 
          position: static; 
-         width: 100%;
       }
       &#page { 
          position: static; 
@@ -144,18 +143,17 @@ article {
       }
    }
    .navbar { padding-left: 15px; }
-   .sticky-wrapper { 
+   #sidebar.affix { 
       width: 25%; 
       padding-left: 0px;
    }
    section#sidebar {
-      width: 100%;
       float: left;
       background-color: white;
       border-color: transparent;
       .box-shadow(0px 0px 0px);
       margin-bottom: 0px;
-      &.stuck { 
+      &.affix { 
          position: fixed;
          top: 0;
          bottom: 0;
@@ -166,7 +164,7 @@ article {
          .panel.panel-primary .panel-heading { .border-top-radius(0px); }
       }
    }
-   div.sticky-wrapper + section#main { 
+   section#sidebar + section#main { 
       width: 75%; 
       padding-left: 25px;
    }
@@ -179,5 +177,5 @@ article {
 // Extra-large monitors
 @media (min-width: 1200px) {
    .container { max-width: 1200px; }
-   section#sidebar.stuck { width: 300px; }
+   section#sidebar.affix { width: 300px; }
 } 
