@@ -83,8 +83,6 @@ post-build:
 	@rm dist/kickstrap/_core/bootstrap/.gitignore
 	@rm dist/kickstrap/_core/bootstrap/.travis.yml
 
-	@echo "Build complete."
-
 test: 
 	@echo "Clearing out previous folder..."
 	@find . -name .DS_Store -exec rm -f {} \;
