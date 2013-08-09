@@ -29,69 +29,91 @@
 // Hide from screenreaders and browsers
 // Credit: HTML5 Boilerplate
 .hidden {
-  display: none;
-  visibility: hidden;
+  display: none !important;
+  visibility: hidden !important;
 }
 
 // Visibility utilities
 
 // For Phones
-.visible-sm   {
-  .responsive-visibility;
+.visible-sm {
+  .responsive-visibility();
 }
-.visible-md { display: none !important; }
-.visible-lg { display: none !important; }
+.visible-md {
+  .responsive-invisibility();
+}
+.visible-lg {
+  .responsive-invisibility();
+}
 
-.hidden-sm { display: none !important; }
+.hidden-sm {
+  .responsive-invisibility();
+}
 .hidden-md {
-  .responsive-visibility;
+  .responsive-visibility();
 }
 .hidden-lg {
-  .responsive-visibility;
+  .responsive-visibility();
 }
 
 
 // Tablets & small desktops only
 @media (min-width: @screen-tablet) and (max-width: @screen-tablet-max) {
-  .visible-sm { display: none !important; }
-  .visible-md {
-    .responsive-visibility;
+  .visible-sm {
+    .responsive-invisibility();
   }
-  .visible-lg { display: none !important; }
+  .visible-md {
+    .responsive-visibility();
+  }
+  .visible-lg {
+    .responsive-invisibility();
+  }
 
   .hidden-sm {
-    .responsive-visibility;
+    .responsive-visibility();
   }
-  .hidden-md { display: none !important; }
+  .hidden-md {
+    .responsive-invisibility();
+  }
   .hidden-lg {
-    .responsive-visibility;
+    .responsive-visibility();
   }
 }
 
 // For desktops
 @media (min-width: @screen-desktop) {
-  .visible-sm { display: none !important; }
-  .visible-md { display: none !important; }
+  .visible-sm {
+    .responsive-invisibility();
+  }
+  .visible-md {
+    .responsive-invisibility();
+  }
   .visible-lg {
-    .responsive-visibility;
+    .responsive-visibility();
   }
 
   .hidden-sm {
-    .responsive-visibility;
+    .responsive-visibility();
   }
   .hidden-md {
-    .responsive-visibility;
+    .responsive-visibility();
   }
-  .hidden-lg { display: none !important; }
+  .hidden-lg {
+    .responsive-invisibility();
+  }
 }
 
 // Print utilities
-.visible-print { display: none !important; }
+.visible-print {
+  .responsive-invisibility();
+}
 .hidden-print  { }
 
 @media print {
   .visible-print {
-    .responsive-visibility;
+    .responsive-visibility();
   }
-  .hidden-print { display: none !important; }
+  .hidden-print {
+    .responsive-invisibility();
+  }
 }
